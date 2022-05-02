@@ -1,0 +1,89 @@
+postgresSql password :- 123
+port 5432
+
+
+Pgadmin master password :- 123
+
+
+database-details
+===================
+connection: {
+host : 'localhost',
+user : 'friendsup',
+password : 'friendsup@123',
+database : 'friendsup_harul',
+charset: 'utf8'
+
+
+command line
+
+restore command : psql -U rpg -d rpg_prelive -h rpg-aurora-eu-cluster.cluster-cq9cccdubtck.eu-central-1.rds.amazonaws.com -p 5432 -f rpg_live-22-8-2018.sql`
+backup command : pg_dump -U rpg -h rpg-aurora-eu-cluster.cluster-cq9cccdubtck.eu-central-1.rds.amazonaws.com -p 5432 rpg_live > UpdateData_price.sql
+pg_dump -U friendsup -h localhost -p 5432 friendsup > friendsup.sql
+psql -U friendsup -d friendsup -h localhost -p 5432 -f friendsup.sql
+
+
+
+psql -U friendsup -d friendsup -h localhost -p 5432 -f friendsup.sql
+
+
+
+live database connection url
+
+ 1 :- https://www.linode.com/docs/databases/postgresql/how-to-access-postgresql-database-remotely-using-pgadmin-on-windows/
+ 2 :- https://www.linode.com/docs/databases/postgresql/securely-manage-remote-postgresql-servers-with-pgadmin-on-macos-x/
+ 
+ 
+ 
+ 
+ db-coomand line 
+ pg_dump friendsup > E:\Friends-up-database\friendsup.sql
+psql -h localhost -p 5432 -U username -f friendsup.sql friendsup
+
+
+database import in postgres Steps:-
+1. Create database in postgres
+2. open command line(cmd)
+3. run command :- psql friendsup postgres < friendsup.sql
+4. notes :-  1. friendsup is database name
+             2. postgres is username for agadmin(postgres)
+			 3. friendsup.sql is my sql file import in postgres.
+5. username :- postgres
+6. password :- 123	
+
+
+postman :- 
+
+run api url :- http://localhost:225/users/allevents
+papram passs :- select Body  and select  row
+pass param ex :- 
+{
+	"id":296
+}
+
+project details :- 
+
+1 :- project path  :- C:\Windows\System32\cmd.exe
+2 :- open cmd and run command :- nodemon app.js
+3 :- open Pgadmin
+4 :- Pgadmin Password :- 123
+		 
+pwd :- 123
+port :- 5433
+
+pwd :- 123
+port :- 5434	
+
+
+live url :- 
+1 :- http://45.79.23.192:225/users/allevents 
+2 :- http://45.79.23.192:225/users/allfriends
+
+1 and 2 both url working fine.(live url).
+
+http://192.168.1.151:225/users/get_interest
+http://localhost:225/users/allfriends
+http://45.79.23.192/
+http://45.79.23.192:225/users/getinitialuserdata
+
+$pathUptoParts
